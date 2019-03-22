@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CPRG214_Assignment_One_HTZ.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <table>
+            <tr>
+                <td colspan="3"  style="width:800px">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/inlandmarina_banner.jpg" Width="700px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center; color:#536677">
+                    
+                    <!--  Navigation -->
+                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2"></asp:Menu>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    <!--
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx">Home</asp:HyperLink>
+&nbsp;|
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CustomerList.aspx">Customer List</asp:HyperLink>
+&nbsp;|
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Customer Entry</asp:HyperLink>
+                    -->
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50px; height:350px">&nbsp; </td>
+                <td style="width:700px">
+                    <asp:ContentPlaceHolder ID="MainPlaceHolder" runat="server">
+                        <!-- Main content area -->
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td style="width:50px">&nbsp; </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center">&copy CPRG214 2019</td>
+            </tr>
+        </table>        
+    </form>
+</body>
+</html>
